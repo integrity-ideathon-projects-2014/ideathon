@@ -1,12 +1,20 @@
 package com.example.ideathon;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
-public class PlayTheme extends Activity{
+import com.example.ideathon.fragments.Fragment_Theme_Community;
+import com.example.ideathon.fragments.Fragment_Theme_Office;
+import com.example.ideathon.fragments.Fragment_Theme_School;
+
+public class PlayTheme extends FragmentActivity{
 
 	ViewPager pager;
+	FragmentPagerAdapter adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,11 +23,50 @@ public class PlayTheme extends Activity{
 		setContentView(R.layout.playtheme);
 		
 		pager = (ViewPager) findViewById(R.id.pager);
+		adapter = new CustomAdapter(getSupportFragmentManager());
+		
+		pager.setAdapter(adapter);
 		
 	}
 	
-	
+	class CustomAdapter extends FragmentPagerAdapter {
 
+//		private final String[] TITLES = { "Routes", "Order Summary" };
+
+		public CustomAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int position) {
+			// TODO Auto-generated method stub
+			Fragment fragment = null;
+			switch (position) {
+			case 0:
+				fragment = new Fragment_Theme_Community();
+				break;
+			case 1:
+				fragment = new Fragment_Theme_Office();
+				break;
+			case 2:
+				fragment = new Fragment_Theme_School();
+			default:
+				break;
+			}
+			return fragment;
+		}
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return 3;
+		}
+
+		/*@Override
+		public CharSequence getPageTitle(int position) {
+			return TITLES[position];
+		}*/
+	}
 	
 
 	
