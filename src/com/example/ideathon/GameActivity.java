@@ -11,7 +11,5 @@ public class GameActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gamepage);
 	}
-	
-	
 
 }
