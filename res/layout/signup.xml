@@ -41,8 +41,8 @@
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
-        android:background="#31B404"
+        android:background="#3B5998"
         android:text="Register"
-        android:textColor="#F3F781" />
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
