@@ -1,5 +1,6 @@
 package com.example.ideathon.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.ideathon.GameActivity;
 import com.example.ideathon.R;
 
 public class Fragment_Theme_Community extends Fragment{
@@ -26,7 +28,7 @@ public class Fragment_Theme_Community extends Fragment{
 		View view = inflater.inflate(R.layout.fragment_community, container, false);
 		btnfwd = (ImageView)view.findViewById(R.id.btnfwd);
 		playtheme = (Button)view.findViewById(R.id.gameplay);
-		pager = (ViewPager)view.findViewById(R.id.pager);
+		pager = (ViewPager)getActivity().findViewById(R.id.pager);
 		
 		return view;
 	}
@@ -42,6 +44,16 @@ public class Fragment_Theme_Community extends Fragment{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				pager.setCurrentItem(1, true);
+			}
+		});
+		
+		playtheme.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(getActivity(), GameActivity.class);
+				startActivity(intent);
 			}
 		});
 	}

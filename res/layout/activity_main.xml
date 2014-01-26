@@ -17,26 +17,51 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_logo" />
 
-    <Button
-        android:id="@+id/fbSign"
-        android:layout_width="155dp"
+    <LinearLayout
+        android:id="@+id/logincontainer"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/signUp"
-        android:layout_below="@+id/signUp"
-        android:layout_marginTop="29dp"
-        android:background="#31B404"
-        android:text="Sign in using FB"
-        android:textColor="#F3F781" />
-
-    <Button
-        android:id="@+id/signUp"
-        android:layout_width="155dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
+        android:layout_below="@id/logo"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:background="#31B404"
-        android:text="Sign Up"
-        android:textColor="#F3F781" />
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/fbSign"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:background="#31B404"
+            android:text="Sign in using FB"
+            android:textColor="#F3F781" />
+
+        <Button
+            android:id="@+id/signUp"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#31B404"
+            android:text="Sign Up"
+            android:textColor="#F3F781" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+        <Button
+            android:id="@+id/playmain"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:background="#31B404"
+            android:text="Play Game"
+            android:textColor="#F3F781" />
+        
+    </LinearLayout>
 
 </RelativeLayout>

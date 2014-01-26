@@ -5,33 +5,35 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
+	
+	Button signfb, signup, playmain;
+	LinearLayout playcontainer, signcontainer;
 
-	Button start;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-<<<<<<< HEAD
 
-		start = (Button) findViewById(R.id.start);
-
-=======
-		start = (Button) findViewById(R.id.signUp);
->>>>>>> 17d8c1813919296e83f55967c6e2762b239b23d6
-		start.setOnClickListener(new View.OnClickListener() {
-
+		signfb = (Button)findViewById(R.id.fbSign);
+		signup = (Button)findViewById(R.id.signUp);
+		
+		signcontainer = (LinearLayout)findViewById(R.id.logincontainer);
+		playcontainer = (LinearLayout)findViewById(R.id.playcontainer);
+		
+		playmain = (Button)findViewById(R.id.playmain);
+		
+		playmain.setOnClickListener(new OnClickListener() {
+			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-<<<<<<< HEAD
 				Intent intent = new Intent(MainActivity.this, PlayTheme.class);
-=======
-				Intent intent = new Intent(MainActivity.this, signUp.class);
->>>>>>> 17d8c1813919296e83f55967c6e2762b239b23d6
 				startActivity(intent);
 			}
 		});
