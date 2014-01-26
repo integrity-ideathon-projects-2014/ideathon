@@ -26,19 +26,20 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/imageView1"
-            android:layout_toRightOf="@+id/imageView1"
             android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView1"
             android:background="#DD4ca64c"
             android:padding="10dp" >
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/b_a"
                 android:layout_gravity="center"
+                android:text="@string/b_a"
+                android:id="@+id/textOne"
                 android:textColor="#FFF" />
-        </FrameLayout>
 
+        </FrameLayout>
     </RelativeLayout>
 
 </LinearLayout>

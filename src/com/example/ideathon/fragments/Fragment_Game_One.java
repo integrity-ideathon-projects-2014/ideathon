@@ -1,34 +1,25 @@
 package com.example.ideathon.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.ideathon.GameActivity;
 import com.example.ideathon.R;
 
 public class Fragment_Game_One extends Fragment{
 	
-	ImageView btnfwd;
-	Button playtheme;
+	TextView textOne;
 	
-	ViewPager pager;
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.fragment_community, container, false);
-		btnfwd = (ImageView)view.findViewById(R.id.btnfwd);
-		playtheme = (Button)view.findViewById(R.id.gameplay);
-		pager = (ViewPager)getActivity().findViewById(R.id.pager);
+		View view = inflater.inflate(R.layout.fragment_game_one, container, false);
+		
+		textOne = (TextView)view.findViewById(R.id.textOne);
 		
 		return view;
 	}
@@ -38,29 +29,20 @@ public class Fragment_Game_One extends Fragment{
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
 		
-		btnfwd.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				pager.setCurrentItem(1, true);
-			}
-		});
+		int i = getActivity().getIntent().getIntExtra("question", 1);
 		
-		playtheme.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(getActivity(), GameActivity.class);
-				startActivity(intent);
-			}
-		});
+		if(i == 1) {
+			textOne.setText(getActivity().getResources().getString(R.string.a_a));
+		}
+		else if(i == 2) {
+			textOne.setText(getActivity().getResources().getString(R.string.b_a));
+		}
+		else {
+			textOne.setText(getActivity().getResources().getString(R.string.c_a));
+		}
 	}
 	
 	
 	
 	
-	
-
 }

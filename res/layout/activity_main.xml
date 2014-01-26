@@ -8,6 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey"
+         />
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="200dp"
@@ -21,47 +28,44 @@
         android:id="@+id/logincontainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/fbSign"
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:background="#31B404"
-            android:text="Sign in using FB"
-            android:textColor="#F3F781" />
-
-        <Button
             android:id="@+id/signUp"
-            android:layout_width="155dp"
+            android:layout_width="174dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="#31B404"
+            android:background="#3B5998"
             android:text="Sign Up"
-            android:textColor="#F3F781" />
+            android:textColor="#FFFFFF" />
+
+        <com.facebook.widget.LoginButton
+            android:id="@+id/authButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUp"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/playcontainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_centerVertical="true"
         android:gravity="center"
-        android:orientation="vertical" >
-        
+        android:orientation="vertical"
+        android:visibility="gone" >
+
         <Button
-            android:id="@+id/playmain"
-            android:layout_width="155dp"
+            android:id="@+id/play"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:background="#31B404"
-            android:text="Play Game"
-            android:textColor="#F3F781" />
-        
+            android:background="#3B5998"
+            android:text="Play"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </RelativeLayout>
