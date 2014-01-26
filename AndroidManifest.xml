@@ -33,7 +33,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.ideathon.signUp"
+            android:name="com.example.ideathon.signup"
             android:label="Sign UP" >
         </activity>
         <activity

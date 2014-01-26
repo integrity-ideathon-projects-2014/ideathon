@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 
-
 public class MainActivity extends FragmentActivity {
 
 	Button start;
@@ -16,6 +15,18 @@ public class MainActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		start = (Button) findViewById(R.id.signUp);
+		start.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intentsignUp = new Intent(MainActivity.this,
+						signUp.class);
+				System.out.println("ONCLICK---------");
+				startActivity(intentsignUp);
+			}
+		});
 		if (savedInstanceState == null) {
 			// Add the fragment on initial activity setup
 			mainFragment = new MainFragment();
@@ -28,16 +39,6 @@ public class MainActivity extends FragmentActivity {
 					.findFragmentById(android.R.id.content);
 			System.out.println("savedInstanceState isn't null");
 		}
-		start = (Button) findViewById(R.id.signUp);
-		start.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this, signUp.class);
-				startActivity(intent);
-			}
-		});
 
 	}
 }

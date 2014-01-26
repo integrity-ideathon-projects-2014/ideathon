@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/signUpDone"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
