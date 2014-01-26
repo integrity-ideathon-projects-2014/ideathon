@@ -30,6 +30,10 @@
             android:name="com.example.ideathon.PlayTheme"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.example.ideathon.signUp"
+            android:label="Sign UP" >
+        </activity>
     </application>
 
 </manifest>

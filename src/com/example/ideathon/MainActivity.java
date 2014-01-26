@@ -14,14 +14,14 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		start = (Button) findViewById(R.id.start);
+		start = (Button) findViewById(R.id.signUp);
 		start.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				//Intent intent = new Intent(this, );
-				
+				Intent intent = new Intent(MainActivity.this, signUp.class);
+				startActivity(intent);
 			}
 		});
 		

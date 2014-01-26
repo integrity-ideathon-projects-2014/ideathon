@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp" >
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter NAME" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" />
+
+    <EditText
+        android:id="@+id/etCountry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="your COUNTRY" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" />
+
+    <EditText
+        android:id="@+id/etBDAY"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="your BIRTH YEAR(for age)" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/signUpDone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="#31B404"
+        android:text="Register"
+        android:textColor="#F3F781" />
+
+</LinearLayout>
