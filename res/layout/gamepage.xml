@@ -13,33 +13,52 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-        
-        <TextView android:layout_width="fill_parent"
+
+        <TextView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Find the problem"
-            android:textSize="20sp"/>
-        
-        <Button android:id="@+id/optionOne"
-            android:layout_width="wrap_content"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/optionOne"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Option"/>
-        
-        <Button android:id="@+id/optionTwo"
-            android:layout_width="wrap_content"
+            android:background="#F3E2A9"
+            android:text="Option" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/optionTwo"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Option"/>
-        
-        <Button android:id="@+id/optionThree"
-            android:layout_width="wrap_content"
+            android:background="#F3E2A9"
+            android:text="Option" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/optionThree"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Option"/>
-        
-        <Button android:id="@+id/optionFour"
-            android:layout_width="wrap_content"
+            android:background="#F3E2A9"
+            android:text="Option" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/optionFour"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Option"/>
-        
-        
+            android:background="#F3E2A9"
+            android:text="Option" />
     </LinearLayout>
 
 </LinearLayout>
