@@ -6,15 +6,20 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.widget.TextView;
 
 import com.example.ideathon.fragments.Fragment_Theme_Community;
 import com.example.ideathon.fragments.Fragment_Theme_Office;
 import com.example.ideathon.fragments.Fragment_Theme_School;
+import com.example.preferences.ProjectPreferences;
 
 public class PlayTheme extends FragmentActivity{
 
 	ViewPager pager;
 	FragmentPagerAdapter adapter;
+	
+	TextView username;
+	ProjectPreferences pref;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,15 @@ public class PlayTheme extends FragmentActivity{
 		
 		pager = (ViewPager) findViewById(R.id.pager);
 		adapter = new CustomAdapter(getSupportFragmentManager());
+		
+		pref = new ProjectPreferences(getApplicationContext());
+		
+		String name = "User";
+		
+		username = (TextView)findViewById(R.id.username);
+		
+		name = pref.getName();
+		username.setText("Welcome, "+ name);
 		
 		pager.setAdapter(adapter);
 		

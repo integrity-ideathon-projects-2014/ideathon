@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+id/playericon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/player_img" />
+
+        <TextView
+            android:id="@+id/playername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/playericon"
+            android:text="Player Name" />
+
+        <TextView
+            android:id="@+id/playercountry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playername"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/playericon"
+            android:text="Player Country" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/scoreplayer"
+            android:layout_toRightOf="@id/playericon"
+            android:text="Integrity Level"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="#AEAEAE"
+            android:id="@+id/playagain"
+            android:textColor="#FFF"
+            android:text="Play Again"
+            android:layout_weight="1"/>
+        
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#3b5998"
+            android:textColor="#FFF"
+            android:id="@+id/share"
+            android:gravity="center"
+            android:text="Share to facebook"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

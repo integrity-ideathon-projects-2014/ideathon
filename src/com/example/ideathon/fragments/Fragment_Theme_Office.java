@@ -63,6 +63,7 @@ public class Fragment_Theme_Office extends Fragment {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(getActivity(), GameActivity.class);
+				intent.putExtra("question", 1);
 				startActivity(intent);
 			}
 		});

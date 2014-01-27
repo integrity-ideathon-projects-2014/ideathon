@@ -10,11 +10,20 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:src="@drawable/ic_school"/>
+    
+    <TextView android:layout_above="@id/themeimg"
+         android:text="College"
+         android:layout_centerHorizontal="true"
+         android:textSize="16sp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="30dp"/>
 
     <TextView android:id="@+id/themedesc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/themeimg"
+        android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:text="Dummy description"/>

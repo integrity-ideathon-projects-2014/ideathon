@@ -1,18 +1,14 @@
 package com.example.ideathon;
 
-import java.util.Date;
 import java.util.List;
 
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.preferences.ProjectPreferences;
 import com.facebook.FacebookRequestError;
@@ -29,14 +25,16 @@ import com.facebook.widget.LoginButton;
 
 public class MainFragment extends Fragment {
 
-	private UiLifecycleHelper uiHelper;
+	private static UiLifecycleHelper uiHelper;
 	private static final String PERMISSION = "publish_actions";
-	private GraphUser user;
-	private boolean canPresentShareDialog;
+	private static GraphUser user;
+	private static boolean canPresentShareDialog;
 	private ProjectPreferences pref;
-	private PendingAction pendingAction = PendingAction.NONE;
-	private List<GraphUser> tags = null;
-	private GraphPlace place;
+	private static PendingAction pendingAction = PendingAction.NONE;
+	private static List<GraphUser> tags = null;
+	private static GraphPlace place;
+	private static Activity activity;
+	
 
 	private enum PendingAction {
 		NONE, POST_STATUS_UPDATE
@@ -46,13 +44,14 @@ public class MainFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		activity = getActivity();
 		uiHelper = new UiLifecycleHelper(getActivity(), callback);
 		uiHelper.onCreate(savedInstanceState);
 		pref = new ProjectPreferences(getActivity());
 		onClickPostStatusUpdate();
 	}
 
-	private boolean hasPublishPermission() {
+	private static boolean hasPublishPermission() {
 		Session session = Session.getActiveSession();
 		return session != null
 				&& session.getPermissions().contains("publish_actions");
@@ -77,15 +76,15 @@ public class MainFragment extends Fragment {
 		}
 	}
 
-	private FacebookDialog.ShareDialogBuilder createShareDialogBuilder() {
-		return new FacebookDialog.ShareDialogBuilder(getActivity())
+	private static FacebookDialog.ShareDialogBuilder createShareDialogBuilder() {
+		return new FacebookDialog.ShareDialogBuilder(activity)
 				.setName("Hello Facebook")
 				.setDescription(
 						"The 'Hello Facebook' sample application showcases simple Facebook integration")
 				.setLink("http://developers.facebook.com/android");
 	}
 
-	private void showPublishResult(String message, GraphObject result,
+	private static void showPublishResult(String message, GraphObject result,
 			FacebookRequestError error) {
 		String title = null;
 		String alertMessage = null;
@@ -99,7 +98,7 @@ public class MainFragment extends Fragment {
 		}
 	}
 
-	private void postStatusUpdate() {
+	private static void postStatusUpdate() {
 		if (canPresentShareDialog) {
 			FacebookDialog shareDialog = createShareDialogBuilder().build();
 			uiHelper.trackPendingDialogCall(shareDialog.present());
@@ -226,7 +225,10 @@ public class MainFragment extends Fragment {
 							System.out.println("Location: "+user.getLocation());
 							System.out.println("Country: "+country+"");
 							System.out.println("Birthday:"+user.getBirthday());
-							postStatusUpdate();
+//							postStatusUpdate();
+							Intent intent = new Intent(getActivity(), PlayTheme.class);
+							getActivity().startActivity(intent);
+							
 						} else {
 							System.out.println("User is null---Nabin");
 						}
@@ -252,6 +254,10 @@ public class MainFragment extends Fragment {
 		} else if (state.isClosed()) {
 			System.out.println("Logged out...");
 		}
+	}
+	
+	public static void postupdate() {
+		postStatusUpdate();
 	}
 
 }

@@ -5,5 +5,46 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="app_id">422382971198238</string>
+    <string name="a_a">The other party has all the information about the company. I am
+
+sure that someone is passing the information. In this situation I 
+
+am sure that they will win the bid this time.</string>
+    <string name="a_b">Its not good. However, we follow what is good for us. We have
+
+the best product. If the company seeks for the good, we are here.</string>
+
+    <string-array name="a_options">
+        <item>Abusive Behavior</item>
+        <item>Dishonesty</item>
+        <item>Cheating</item>
+        <item>Leaking of information</item>
+    </string-array>
+
+    <string name="b_a">Please be in queue. We have been standing here for hours and
+
+how could you try to ignore us and directly go in front.</string>
+    <string name="b_b">I don\’t have to be in queue. I am the brother of the officer
+
+receiving the bill inside. I can pay my bill to him in his cabin.</string>
+
+    <string-array name="b_options">
+        <item>Jumping the queue</item>
+        <item>Financial fraud</item>
+        <item>Provide wrong information</item>
+        <item>Time theft</item>
+    </string-array>
+
+    <string name="c_a">I am feeling sorry I couldn\’t help the lady. She was crying for
+
+help. The thief took away her bag who just passed by me.</string>
+    <string name="c_b">You didn\'t act correctly</string>
+
+    <string-array name="c_options">
+        <item>Corruption</item>
+        <item>Unsympathetic</item>
+        <item>Dishonesty</item>
+        <item>Abusive Behaviour</item>
+    </string-array>
 
 </resources>
